@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-header',
-  styleUrl: './header.scss',
+  imports: [],
   templateUrl: './header.html',
+  styleUrl: './header.scss'
 })
 export class Header {
   isDarkMode = true;
-  
- toggleTheme(): void {
+  isMenuOpen = false;
+
+  toggleTheme(): void {
     this.isDarkMode = !this.isDarkMode;
 
     document.body.classList.toggle(
@@ -18,4 +19,11 @@ export class Header {
     );
   }
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 }

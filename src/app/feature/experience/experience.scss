@@ -1,15 +1,12 @@
 .experience {
     min-height: 100vh;
-
     position: relative;
-
     padding: 110px 70px;
 }
 
 .experience-container {
     width: 100%;
     max-width: 1150px;
-
     margin: 0 auto;
 }
 
@@ -20,29 +17,22 @@
 
 .section-header {
     max-width: 700px;
-
     margin-bottom: 60px;
 }
 
 .section-label {
     color: var(--accent);
-
     font-size: 13px;
     font-weight: 700;
-
     letter-spacing: 3px;
-
     margin-bottom: 12px;
 }
 
 .section-header h2 {
     color: var(--text);
-
     font-size: clamp(42px, 5vw, 64px);
     line-height: 1;
-
     letter-spacing: -2px;
-
     margin-bottom: 20px;
 }
 
@@ -52,7 +42,6 @@
 
 .section-description {
     color: var(--description);
-
     font-size: 17px;
     line-height: 1.7;
 }
@@ -65,42 +54,31 @@
 .company-header {
     display: flex;
     align-items: center;
-
     gap: 16px;
-
     margin-bottom: 45px;
 }
 
 .company-icon {
     width: 48px;
     height: 48px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 12px;
-
     background: rgba(139, 92, 246, 0.1);
-
     border: 1px solid var(--card-border);
-
     color: var(--accent);
-
     font-size: 19px;
 }
 
 .company-header h3 {
     color: var(--text);
-
     font-size: 19px;
-
     margin-bottom: 4px;
 }
 
 .company-header p {
     color: var(--muted);
-
     font-size: 13px;
 }
 
@@ -111,7 +89,6 @@
 
 .timeline {
     position: relative;
-
     padding-left: 45px;
 }
 
@@ -120,16 +97,11 @@
 
 .timeline::before {
     content: '';
-
     position: absolute;
-
     top: 0;
     bottom: 0;
-
     left: 10px;
-
     width: 2px;
-
     background: linear-gradient(to bottom,
             var(--accent),
             rgba(139, 92, 246, 0.08));
@@ -142,7 +114,6 @@
 
 .timeline-item {
     position: relative;
-
     margin-bottom: 35px;
 }
 
@@ -151,19 +122,13 @@
 
 .timeline-marker {
     position: absolute;
-
     left: -43px;
     top: 31px;
-
     width: 17px;
     height: 17px;
-
     border-radius: 50%;
-
     background: var(--bg);
-
     border: 3px solid var(--accent);
-
     box-shadow:
         0 0 0 5px rgba(139, 92, 246, 0.08),
         0 0 20px rgba(139, 92, 246, 0.25);
@@ -178,14 +143,10 @@
 
 .experience-card {
     padding: 28px 30px;
-
     border: 1px solid var(--card-border);
     border-radius: 16px;
-
     background: var(--card-bg);
-
     backdrop-filter: blur(10px);
-
     transition:
         transform 0.3s ease,
         border-color 0.3s ease,
@@ -194,9 +155,7 @@
 
 .experience-card:hover {
     transform: translateY(-5px);
-
     border-color: var(--accent);
-
     box-shadow:
         0 18px 45px rgba(0, 0, 0, 0.12),
         0 0 30px rgba(139, 92, 246, 0.07);
@@ -209,54 +168,40 @@
 
 .card-top {
     display: flex;
-
     justify-content: space-between;
     align-items: flex-start;
-
     gap: 30px;
-
     margin-bottom: 22px;
 }
 
 .project-label {
     color: var(--accent);
-
     font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 1.5px;
     text-transform: uppercase;
-
     margin-bottom: 8px;
 }
 
 .card-top h3 {
     color: var(--text);
-
     font-size: 20px;
-
     margin-bottom: 7px;
 }
 
 .role {
     color: var(--muted);
-
     font-size: 13px;
 }
 
 .date {
     flex-shrink: 0;
-
     padding: 7px 11px;
-
     border: 1px solid var(--card-border);
     border-radius: 20px;
-
     color: var(--accent);
-
     font-size: 11px;
     font-weight: 600;
-
     white-space: nowrap;
 }
 
@@ -267,16 +212,13 @@
 
 .experience-card ul {
     padding-left: 20px;
-
     margin: 0 0 24px;
 }
 
 .experience-card li {
     color: var(--description);
-
     font-size: 14px;
     line-height: 1.7;
-
     margin-bottom: 8px;
 }
 
@@ -292,23 +234,16 @@
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-
     gap: 8px;
 }
 
 .tech-tags span {
     padding: 6px 11px;
-
     border-radius: 20px;
-
     background: rgba(139, 92, 246, 0.08);
-
     border: 1px solid var(--card-border);
-
     color: var(--muted);
-
     font-size: 11px;
-
     transition:
         color 0.2s ease,
         border-color 0.2s ease,
@@ -317,9 +252,7 @@
 
 .tech-tags span:hover {
     color: var(--accent);
-
     border-color: var(--accent);
-
     transform: translateY(-2px);
 }
 

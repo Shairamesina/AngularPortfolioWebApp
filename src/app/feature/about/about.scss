@@ -1,24 +1,18 @@
 .about {
     min-height: 100vh;
-
     display: flex;
     align-items: center;
-
     position: relative;
-
     padding: 110px 70px;
 }
 
 .about-container {
     width: 100%;
     max-width: 1250px;
-
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
     align-items: center;
-
     gap: 100px;
 }
 
@@ -35,7 +29,6 @@
 
 .photo-frame {
     position: relative;
-
     width: 330px;
     height: 420px;
 }
@@ -43,15 +36,11 @@
 .photo-frame img {
     position: relative;
     z-index: 2;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: center;
-
     border-radius: 24px;
-
     border: 1px solid var(--card-border);
 
     box-shadow:
@@ -69,18 +58,13 @@
 
 .photo-decoration {
     position: absolute;
-
     top: 20px;
     left: -20px;
-
     width: 100%;
     height: 100%;
-
     z-index: 1;
-
     border: 2px solid var(--accent);
     border-radius: 24px;
-
     opacity: 0.5;
 
     transition:
@@ -104,23 +88,17 @@
 
 .section-label {
     margin-bottom: 12px;
-
     color: var(--accent);
-
     font-size: 13px;
     font-weight: 700;
-
     letter-spacing: 3px;
 }
 
 .about-content h2 {
     margin-bottom: 28px;
-
     color: var(--text);
-
     font-size: clamp(42px, 5vw, 64px);
     line-height: 1;
-
     letter-spacing: -2px;
 }
 
@@ -130,9 +108,7 @@
 
 .about-text {
     margin-bottom: 18px;
-
     color: var(--description);
-
     font-size: 17px;
     line-height: 1.8;
 }
@@ -144,27 +120,19 @@
 
 .about-highlights {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 14px;
-
     margin-top: 35px;
 }
 
 .highlight {
     display: flex;
     align-items: center;
-
     gap: 12px;
-
     padding: 15px;
-
     border: 1px solid var(--card-border);
     border-radius: 12px;
-
     background: var(--card-bg);
-
     backdrop-filter: blur(8px);
 
     transition:
@@ -175,9 +143,7 @@
 
 .highlight:hover {
     transform: translateY(-5px);
-
     border-color: var(--accent);
-
     box-shadow:
         0 12px 30px rgba(0, 0, 0, 0.15),
         0 0 25px rgba(139, 92, 246, 0.08);
@@ -186,17 +152,12 @@
 .highlight-icon {
     min-width: 38px;
     height: 38px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 10px;
-
     background: rgba(139, 92, 246, 0.1);
-
     color: var(--accent);
-
     font-size: 18px;
 }
 
@@ -207,15 +168,12 @@
 
 .highlight-content strong {
     color: var(--text);
-
     font-size: 13px;
 }
 
 .highlight-content span {
     margin-top: 3px;
-
     color: var(--muted);
-
     font-size: 11px;
     line-height: 1.4;
 }
@@ -231,29 +189,22 @@
 
 .tech-title {
     margin-bottom: 15px;
-
     color: var(--muted);
-
     font-size: 13px;
 }
 
 .tech-list {
     display: flex;
     flex-wrap: wrap;
-
     gap: 10px;
 }
 
 .tech-list span {
     padding: 8px 13px;
-
     border: 1px solid var(--card-border);
     border-radius: 20px;
-
     background: var(--card-bg);
-
     color: var(--muted);
-
     font-size: 12px;
 
     transition:
@@ -264,9 +215,7 @@
 
 .tech-list span:hover {
     color: var(--accent);
-
     border-color: var(--accent);
-
     transform: translateY(-2px);
 }
 
@@ -305,13 +254,11 @@
 
     .about {
         min-height: auto;
-
         padding: 100px 25px 70px;
     }
 
     .about-container {
         grid-template-columns: 1fr;
-
         gap: 60px;
     }
 
@@ -321,7 +268,6 @@
 
     .about-content {
         order: 2;
-
         max-width: 100%;
     }
 
