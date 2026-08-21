@@ -1,0 +1,22 @@
+@if (isLoading) {
+  <div class="loader">
+    <div class="loader-content">
+
+      <div
+        class="cup"
+        (animationend)="finishLoading()"
+      >
+        <span class="steam"></span>
+        <span class="steam"></span>
+        <span class="steam"></span>
+
+        <div class="cup-handle"></div>
+      </div>
+
+      <p class="portfolio-name">
+        <span>SM</span> Portfolio
+      </p>
+
+    </div>
+  </div>
+}

@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="header-container">
+    <a href="#" class="logo">Shaira Mesina</a>
+
+    <nav class="nav">
+      <a href="">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <!-- <a href="#projects">Projects</a> -->
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" (click)="toggleTheme()"
+        [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+        <i class="fa-solid" [class.fa-sun]="isDarkMode" [class.fa-moon]="!isDarkMode">
+        </i>
+      </button>
+    </nav>
+  </div>
+</header>
