@@ -8,9 +8,10 @@ import { About } from './feature/about/about';
 import { Experience } from './feature/experience/experience';
 import { Contact } from './feature/contact/contact';
 import { Skills } from './feature/skills/skills';
+import { BeyondCode } from './feature/beyond-code/beyond-code';
 
 @Component({
-  imports: [RouterOutlet, Header, Home, Loader, ParticleBackground, About, Experience, Contact, Skills],
+  imports: [RouterOutlet, Header, Home, Loader, ParticleBackground, About, Experience, Contact, Skills, BeyondCode],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
