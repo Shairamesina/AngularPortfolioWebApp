@@ -78,18 +78,67 @@
                 <span>Build</span>
             </div>
 
-            <div class="spotify-player">
+            <!-- <div class="spotify-player">
                 <p class="soundtrack-label">🎧 CODING SOUNDTRACK</p>
 
                 <iframe src="https://open.spotify.com/embed/playlist/5P9bsnLNIonUAb44abGRco?utm_source=generator&theme=0&si=6df58e3cacf34f18" width="100%" height="154"
                     style="border-radius: 12px;" frameborder="0" allowfullscreen
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                 </iframe>
-                <!-- <iframe data-testid="embed-iframe" style="border-radius:12px"
-                    src="https://open.spotify.com/embed/playlist/5P9bsnLNIonUAb44abGRco?utm_source=generator&theme=0&si=6df58e3cacf34f18"
-                    width="85%" height="352" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe> -->
+
+            </div> -->
+
+            <div class="music-player">
+
+                <div class="music-header">
+                    <div>
+                        <span class="music-label">
+                            <i class="fa-solid fa-headphones"></i>
+                            CODING SOUNDTRACK
+                        </span>
+
+                        <p class="music-status">
+                            {{ isPlaying ? 'Now Playing' : 'Paused' }}
+                        </p>
+                    </div>
+
+                    <i class="fa-solid fa-music music-icon" [class.playing]="isPlaying">
+                    </i>
+                </div>
+
+
+                <div class="track-info">
+                    <h4>CODING MUSIC</h4>
+                    <p>lofi</p>
+                </div>
+
+
+                <audio #audioPlayer src="/music/coding-song.mp3" (timeupdate)="updateProgress()"
+                    (loadedmetadata)="loadMetadata()" (ended)="onSongEnded()">
+                </audio>
+
+
+                <div class="progress-container">
+
+                    <input type="range" class="progress-bar" min="0" [max]="duration || 0" [value]="currentTime"
+                        (input)="seekSong($event)" aria-label="Song progress">
+
+                    <div class="time">
+                        <span>{{ formatTime(currentTime) }}</span>
+                        <span>{{ formatTime(duration) }}</span>
+                    </div>
+
+                </div>
+
+
+                <button type="button" class="play-button" (click)="toggleMusic()"
+                    [attr.aria-label]="isPlaying ? 'Pause music' : 'Play music'">
+
+                    <i class="fa-solid" [class.fa-pause]="isPlaying" [class.fa-play]="!isPlaying">
+                    </i>
+
+                </button>
+
             </div>
 
         </div>
