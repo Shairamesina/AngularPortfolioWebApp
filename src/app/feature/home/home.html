@@ -1,10 +1,15 @@
 <section id="home" class="hero">
+
     <div class="hero-container">
 
-        <!-- LEFT SIDE -->
+        <!-- =========================
+         LEFT SIDE
+    ========================== -->
         <div class="hero-content">
 
-            <p class="intro">Hi, I'm Shaira 👋</p>
+            <p class="intro">
+                Hi, I'm Shaira 👋
+            </p>
 
             <h1>
                 Front-End
@@ -12,33 +17,44 @@
             </h1>
 
             <p class="description">
-                I create modern and reliable web experiences using Angular, TypeScript, and front-end technologies.</p>
+                I create modern and reliable web experiences using
+                Angular, TypeScript, and front-end technologies.
+            </p>
 
+
+            <!-- RESUME -->
             <div class="hero-actions">
+
                 <a href="/resume/mesina-shaira-resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-btn">
                     View Resume
                 </a>
+
             </div>
+
 
             <!-- SOCIAL LINKS -->
             <div class="social-links">
 
-                <!-- <a href="https://github.com/Shairamesina" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a> -->
-
                 <a href="https://www.linkedin.com/in/shaira-mesina/" target="_blank" rel="noopener noreferrer"
                     aria-label="LinkedIn">
+
                     <i class="fa-brands fa-linkedin-in"></i>
+
                 </a>
+
 
                 <a href="https://www.facebook.com/shairamesina31/" target="_blank" rel="noopener noreferrer"
                     aria-label="Facebook">
+
                     <i class="fa-brands fa-facebook-f"></i>
+
                 </a>
 
+
                 <a href="mailto:mesinashaira@gmail.com" aria-label="Email">
+
                     <i class="fa-solid fa-envelope"></i>
+
                 </a>
 
             </div>
@@ -46,91 +62,134 @@
         </div>
 
 
-        <!-- RIGHT SIDE -->
+
+        <!-- =========================
+         RIGHT SIDE / BRAIN
+    ========================== -->
         <div class="brain-visual">
 
             <div class="brain-glow"></div>
 
+
             <!-- MAIN BRAIN -->
             <div class="brain">
+
                 <i class="fa-solid fa-brain"></i>
+
             </div>
 
-            <!-- FLOATING ELEMENTS -->
+
+            <!-- FLOATING CARDS -->
 
             <div class="brain-item item-code">
+
                 <i class="fa-solid fa-code"></i>
+
                 <span>Code</span>
+
             </div>
+
 
             <div class="brain-item item-angular">
+
                 <i class="fa-brands fa-angular"></i>
+
                 <span>Angular</span>
+
             </div>
+
 
             <div class="brain-item item-debug">
+
                 <i class="fa-solid fa-bug"></i>
+
                 <span>Debug</span>
+
             </div>
+
 
             <div class="brain-item item-build">
+
                 <i class="fa-solid fa-gears"></i>
+
                 <span>Build</span>
+
             </div>
 
-            <!-- <div class="spotify-player">
-                <p class="soundtrack-label">🎧 CODING SOUNDTRACK</p>
 
-                <iframe src="https://open.spotify.com/embed/playlist/5P9bsnLNIonUAb44abGRco?utm_source=generator&theme=0&si=6df58e3cacf34f18" width="100%" height="154"
-                    style="border-radius: 12px;" frameborder="0" allowfullscreen
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                </iframe>
 
-            </div> -->
+            <!-- =========================
+           DESKTOP MUSIC PLAYER
+      ========================== -->
 
             <div class="music-player">
 
                 <div class="music-header">
+
                     <div>
+
                         <span class="music-label">
+
                             <i class="fa-solid fa-headphones"></i>
+
                             CODING SOUNDTRACK
+
                         </span>
 
+
                         <p class="music-status">
+
                             {{ isPlaying ? 'Now Playing' : 'Paused' }}
+
                         </p>
+
                     </div>
+
 
                     <i class="fa-solid fa-music music-icon" [class.playing]="isPlaying">
                     </i>
+
                 </div>
+
 
 
                 <div class="track-info">
+
                     <h4>CODING MUSIC</h4>
+
                     <p>lofi</p>
+
                 </div>
 
 
-                <audio #audioPlayer src="/music/coding-song.mp3" (timeupdate)="updateProgress()"
-                    (loadedmetadata)="loadMetadata()" (ended)="onSongEnded()">
+
+                <!-- AUDIO -->
+                <audio #audioPlayer src="/music/coding-song.mp3" loop (timeupdate)="updateProgress()"
+                    (loadedmetadata)="loadMetadata()">
                 </audio>
 
 
+
+                <!-- PROGRESS -->
                 <div class="progress-container">
 
                     <input type="range" class="progress-bar" min="0" [max]="duration || 0" [value]="currentTime"
                         (input)="seekSong($event)" aria-label="Song progress">
 
+
                     <div class="time">
+
                         <span>{{ formatTime(currentTime) }}</span>
+
                         <span>{{ formatTime(duration) }}</span>
+
                     </div>
 
                 </div>
 
 
+
+                <!-- PLAY -->
                 <button type="button" class="play-button" (click)="toggleMusic()"
                     [attr.aria-label]="isPlaying ? 'Pause music' : 'Play music'">
 
@@ -144,4 +203,18 @@
         </div>
 
     </div>
+
+
+    <!-- =========================
+       MOBILE MUSIC BUTTON
+  ========================== -->
+
+    <button type="button" class="mobile-music-toggle" [class.playing]="isPlaying" (click)="toggleMusic()"
+        [attr.aria-label]="isPlaying ? 'Pause music' : 'Play music'">
+
+        <i class="fa-solid" [class.fa-volume-high]="isPlaying" [class.fa-music]="!isPlaying">
+        </i>
+
+    </button>
+
 </section>
