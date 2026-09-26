@@ -1,0 +1,22 @@
+<audio #audioPlayer src="/music/coding-song.mp3" loop (play)="onPlay()" (pause)="onPause()">
+</audio>
+
+<button type="button" class="music-toggle" [class.playing]="isPlaying" (click)="toggleMusic()"
+    [attr.aria-label]="isPlaying ? 'Pause music' : 'Play music'"
+    [attr.title]="isPlaying ? 'Pause music' : 'Play music'">
+
+    <span class="music-disc">
+
+        <i class="fa-solid fa-music"></i>
+
+        @if (!isPlaying) {
+        <span class="music-slash"></span>
+        }
+
+    </span>
+
+    @if (isPlaying) {
+    <span class="music-pulse"></span>
+    }
+
+</button>

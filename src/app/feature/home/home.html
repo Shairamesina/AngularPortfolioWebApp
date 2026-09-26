@@ -2,9 +2,7 @@
 
     <div class="hero-container">
 
-        <!-- =========================
-         LEFT SIDE
-    ========================== -->
+        <!-- ========================= LEFT SIDE ========================== -->
         <div class="hero-content">
 
             <p class="intro">
@@ -21,7 +19,6 @@
                 Angular, TypeScript, and front-end technologies.
             </p>
 
-
             <!-- RESUME -->
             <div class="hero-actions">
 
@@ -30,7 +27,6 @@
                 </a>
 
             </div>
-
 
             <!-- SOCIAL LINKS -->
             <div class="social-links">
@@ -42,14 +38,12 @@
 
                 </a>
 
-
                 <a href="https://www.facebook.com/shairamesina31/" target="_blank" rel="noopener noreferrer"
                     aria-label="Facebook">
 
                     <i class="fa-brands fa-facebook-f"></i>
 
                 </a>
-
 
                 <a href="mailto:mesinashaira@gmail.com" aria-label="Email">
 
@@ -61,15 +55,10 @@
 
         </div>
 
-
-
-        <!-- =========================
-         RIGHT SIDE / BRAIN
-    ========================== -->
+        <!-- ========================= RIGHT SIDE / BRAIN ========================== -->
         <div class="brain-visual">
 
             <div class="brain-glow"></div>
-
 
             <!-- MAIN BRAIN -->
             <div class="brain">
@@ -77,7 +66,6 @@
                 <i class="fa-solid fa-brain"></i>
 
             </div>
-
 
             <!-- FLOATING CARDS -->
 
@@ -89,7 +77,6 @@
 
             </div>
 
-
             <div class="brain-item item-angular">
 
                 <i class="fa-brands fa-angular"></i>
@@ -97,7 +84,6 @@
                 <span>Angular</span>
 
             </div>
-
 
             <div class="brain-item item-debug">
 
@@ -107,7 +93,6 @@
 
             </div>
 
-
             <div class="brain-item item-build">
 
                 <i class="fa-solid fa-gears"></i>
@@ -116,105 +101,8 @@
 
             </div>
 
-
-
-            <!-- =========================
-           DESKTOP MUSIC PLAYER
-      ========================== -->
-
-            <div class="music-player">
-
-                <div class="music-header">
-
-                    <div>
-
-                        <span class="music-label">
-
-                            <i class="fa-solid fa-headphones"></i>
-
-                            CODING SOUNDTRACK
-
-                        </span>
-
-
-                        <p class="music-status">
-
-                            {{ isPlaying ? 'Now Playing' : 'Paused' }}
-
-                        </p>
-
-                    </div>
-
-
-                    <i class="fa-solid fa-music music-icon" [class.playing]="isPlaying">
-                    </i>
-
-                </div>
-
-
-
-                <div class="track-info">
-
-                    <h4>CODING MUSIC</h4>
-
-                    <p>lofi</p>
-
-                </div>
-
-
-
-                <!-- AUDIO -->
-                <audio #audioPlayer src="/music/coding-song.mp3" loop (timeupdate)="updateProgress()"
-                    (loadedmetadata)="loadMetadata()">
-                </audio>
-
-
-
-                <!-- PROGRESS -->
-                <div class="progress-container">
-
-                    <input type="range" class="progress-bar" min="0" [max]="duration || 0" [value]="currentTime"
-                        (input)="seekSong($event)" aria-label="Song progress">
-
-
-                    <div class="time">
-
-                        <span>{{ formatTime(currentTime) }}</span>
-
-                        <span>{{ formatTime(duration) }}</span>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- PLAY -->
-                <button type="button" class="play-button" (click)="toggleMusic()"
-                    [attr.aria-label]="isPlaying ? 'Pause music' : 'Play music'">
-
-                    <i class="fa-solid" [class.fa-pause]="isPlaying" [class.fa-play]="!isPlaying">
-                    </i>
-
-                </button>
-
-            </div>
-
         </div>
 
     </div>
-
-
-    <!-- =========================
-       MOBILE MUSIC BUTTON
-  ========================== -->
-
-    <button type="button" class="mobile-music-toggle" [class.playing]="isPlaying" (click)="toggleMusic()"
-        [attr.aria-label]="isPlaying ? 'Pause music' : 'Play music'">
-
-        <i class="fa-solid" [class.fa-volume-high]="isPlaying" [class.fa-music]="!isPlaying">
-        </i>
-
-    </button>
 
 </section>

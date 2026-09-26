@@ -9,9 +9,10 @@ import { Experience } from './feature/experience/experience';
 import { Contact } from './feature/contact/contact';
 import { Skills } from './feature/skills/skills';
 import { BeyondCode } from './feature/beyond-code/beyond-code';
+import { MusicPlayer } from './feature/music-player/music-player';
 
 @Component({
-  imports: [RouterOutlet, Header, Home, Loader, ParticleBackground, About, Experience, Contact, Skills, BeyondCode],
+  imports: [RouterOutlet, Header, Home, Loader, ParticleBackground, About, Experience, Contact, Skills, BeyondCode, MusicPlayer],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

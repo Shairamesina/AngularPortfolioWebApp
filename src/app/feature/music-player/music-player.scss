@@ -1,0 +1,188 @@
+/* ========================================
+   FLOATING MUSIC BUTTON
+======================================== */
+
+.music-toggle {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 9999;
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    border-radius: 50%;
+    background: rgba(8, 16, 30, 0.94);
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(139, 92, 246, 0.15);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px) scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.92);
+    }
+
+    &.playing {
+        border-color: #8b5cf6;
+        box-shadow:
+            0 8px 30px rgba(0, 0, 0, 0.35),
+            0 0 28px rgba(139, 92, 246, 0.4);
+    }
+}
+
+/* ========================================
+   MUSIC DISC
+======================================== */
+
+.music-disc {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+        repeating-radial-gradient(circle,
+            #8b5cf6 0,
+            #8b5cf6 3px,
+            #7548d8 4px,
+            #7548d8 6px);
+
+    color: #ffffff;
+    animation: spinMusic 3s linear infinite;
+    animation-play-state: paused;
+}
+
+
+/* ========================================
+   PLAYING = ROTATE DISC
+======================================== */
+
+.music-toggle.playing .music-disc {
+    animation-play-state: running;
+}
+
+/* ========================================
+   MUSIC ICON
+======================================== */
+
+.music-disc i {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* ========================================
+   SLASH
+   Visible when paused
+======================================== */
+
+.music-slash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    width: 30px;
+    height: 2.5px;
+    border-radius: 10px;
+    background: #ffffff;
+    transform:
+        translate(-50%, -50%)
+        rotate(-45deg);
+    pointer-events: none;
+    box-shadow:
+        0 0 4px rgba(8, 16, 30, 0.6);
+}
+
+/* ========================================
+   PULSE
+   Hidden when paused
+======================================== */
+
+.music-pulse {
+    position: absolute;
+    inset: -6px;
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* Show pulse only when playing */
+.music-toggle.playing .music-pulse {
+    opacity: 1;
+    animation: musicPulse 1.8s ease-out infinite;
+}
+
+/* ========================================
+   DISC ROTATION
+======================================== */
+
+@keyframes spinMusic {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   PULSE ANIMATION
+======================================== */
+
+@keyframes musicPulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .music-toggle {
+        right: 18px;
+        bottom: 80px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .music-disc {
+        width: 43px;
+        height: 43px;
+    }
+
+    .music-disc i {
+        font-size: 16px;
+    }
+
+    .music-slash {
+        width: 27px;
+        height: 2px;
+    }
+}
